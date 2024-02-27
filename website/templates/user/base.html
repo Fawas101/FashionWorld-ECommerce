@@ -1,0 +1,224 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+        <div class="container-fluid">
+            <!-- Your content goes here -->
+        </div>
+        {% endblock %}
+    </title>
+    <link type="text/css" href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+    <link href="{%  static 'css/style.css' %}" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+</head>
+<body>
+    <header class="header_section">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+            <a class="navbar-brand pb-5" href="/home">
+              <img src="https://i.pinimg.com/564x/7a/ea/a1/7aeaa11d663208bb36ad4b7772d68f73.jpg" alt="" /><span>
+                Fasion World
+              </span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+  
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                <ul class="navbar-nav  ">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/category"> Collections</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/services"> Services </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact us</a>
+                  </li>
+                  <li >
+                  <a href="/cart" ><img src="https://cdn-icons-png.flaticon.com/128/4903/4903482.png" width="35px" alt=""> </a>
+                  </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+                  <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+                </form>
+              </div>
+              
+            </div>
+          </nav>
+        </div>
+      </header>
+      {% block content %}   
+      
+      {% endblock %}
+    
+
+  <section class="info_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h5>
+            Fasion World
+          </h5>
+          <ul>
+            <li>
+              Who We Are
+            </li>
+            <li>
+              Join Our Team
+            </li>
+            <li>
+              Terms & Conditions
+            </li>
+            <li>
+              Fees & Payments
+            </li>
+            <li>
+              Return & Refund Policy
+            </li>
+            <li>
+              Promotions Terms & Conditions
+            </li>
+            
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>
+            Help
+          </h5>
+          <ul>
+            <li>
+              Track Your Order 
+            </li>
+            <li>
+              Return
+            </li>
+            <li>
+              Cancellatiion
+            </li>
+            <li>
+              Payments
+            </li>
+            <li>
+              Customer care
+            </li>
+            
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>
+            Shop by
+          </h5>
+          <ul>
+            <li>
+              Men
+            </li>
+            <li>
+              Women
+            </li>
+            <li>
+              Indie
+            </li>
+            <li>
+              Stores
+            </li>
+            <li>
+              New Arrivals
+            </li>
+            <li>
+              Home
+            </li>
+            <li>
+              Brand
+            </li>
+            <li>
+              Colllections
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <div class="social_container">
+            <h5>
+              Follow Us
+            </h5>
+            <div class="social-box">
+              <a href="">
+                <img src="images/fb.png" alt="">
+              </a>
+
+              <a href="">
+                <img src="https://i.pinimg.com/564x/b5/66/fa/b566fa1473df5b662b54babb764a46f2.jpg" alt="">
+              </a>
+              <a href="">
+                <img src="https://i.pinimg.com/564x/b0/28/c2/b028c2e59043116dfc0da6ec6fd26d70.jpg" alt="">
+              </a>
+              <a href="">
+                <img src="https://i.pinimg.com/736x/2e/a0/d1/2ea0d1bcb2702c62619f82359e8a4650.jpg" alt="">
+              </a>
+              <a href="">
+                <img src="https://i.pinimg.com/564x/bc/20/72/bc2072d5808e62ea5182b73eab871de2.jpg" alt="">
+              </a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+      Copyright &copy; 2023 All Rights Reserved By
+      <a href="https://html.design/">Fasion World</a>
+    </p>
+  </section>
+  <!-- footer section -->
+
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+
+  <script>
+    // This example adds a marker to indicate the position of Bondi Beach in Sydney,
+    // Australia.
+    function initMap() {
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 11,
+        center: {
+          lat: 40.645037,
+          lng: -73.880224
+        },
+      });
+
+      var image = 'images/maps-and-flags.png';
+      var beachMarker = new google.maps.Marker({
+        position: {
+          lat: 40.645037,
+          lng: -73.880224
+        },
+        map: map,
+        icon: image
+      });
+    }
+  </script>
+  <!-- google map js -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap">
+  </script>
+  <!-- end google map js -->
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+{% extends 'user/base.html'%}
+
+{% load static %}
+
+{% block title %}
+ Collections
+{% endblock %}
+
+<!DOCTYPE html>
+<html lang="en">
+    {% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=~~, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="{% static 'css/product_details.css' %}" rel="stylesheet" />
+</head>
+<body>
+
+    <main class="container" style="background-color: whitesmoke;">
+ 
+        <!-- Left Column / Headphones Image -->
+        <div class="left-column mx-5 my-4">
+        <a href="">
+          <img data-image="red"  class="active "  src="{{ single_product.image.url }}" height="550px" alt="">
+        </a>
+        </div>
+       
+       
+        <!-- Right Column -->
+        <div class="right-column my-5 py-5">
+       
+          <!-- Product Description -->
+          <div class="product-description">
+            <span>{{single_product.category}}</span>
+            <h1>{{ single_product.product_name }}</h1>
+            <p>{{single_product.description}}</p>
+          </div>
+          
+            <!-- Product Color -->
+             <div class="product-color">
+              <span>Size</span>
+       
+              <div class="color-choose">
+                <div>
+                  <input data-image="red" type="radio" id="red" name="color" value="red" checked>
+                  <label for="red"><span></span></label>
+                </div>
+                <div>
+                  <input data-image="blue" type="radio" id="blue" name="color" value="blue">
+                  <label for="blue"><span></span></label>
+                </div>
+                <div>
+                  <input data-image="black" type="radio" id="black" name="color" value="black">
+                  <label for="black"><span></span></label>
+                </div>
+              </div>
+       
+            </div>
+            
+            <div class="row pb-4 px-3">
+                <div class="item-option-select  ">
+                    <h6>Select Size</h6>
+                    <div class="btn-group btn-group-sm btn-group-toggle" data-toggle="buttons" >
+                        <label class="btn btn-light">
+                            <input type="radio" name="radio_color">S
+                        </label>
+                        <label class="btn btn-light active">
+                            <input type="radio" name="radio_color">M
+                        </label>
+                        <label class="btn btn-light">
+                            <input type="radio" name="radio_color">L
+                        </label>
+                        <label class="btn btn-light" >
+                            <input type="radio" name="radio_color">XL
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product Pricing -->
+          <div class="product-price pb-3">
+            <span>Rs - {{single_product.price}}</span>
+          </div>
+
+        <div >
+            {% if single_product.stock <= 0 %}
+            <b><h4 style="color: red;" >Out of Stock!</h4></b> </div> 
+            {% else %}
+            <a href="{% url 'add_cart' single_product.id  %}" class="cart-btn">Add to cart</a>
+            {%endif%}
+            </div>
+          </div>
+       
+          
+        </div>
+      </main>
+
+</body>
+
+</html>
+{% endblock %}

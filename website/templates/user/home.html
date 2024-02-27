@@ -1,0 +1,342 @@
+{% extends 'user/base.html'%}
+{% load static %}
+
+{% block title %}
+  Home
+{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+
+<html>
+       
+<head>
+       
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700display=swap" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="{%  static 'css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link type="text/css" href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="hero_area">
+    <!-- slider section -->
+    <section class=" slider_section position-relative">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active ">
+            <div class="slider_item-box ">
+              <div class="slider_item-container ">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-6 ">
+                      <div class="slider_item-detail mx-5 mb-5">
+                        <div>
+                          <h1>
+                            Welcome to <br />
+                            Our Fasion World
+                          </h1>
+                          <p>
+                            Fashion dresses encompass a wide array of styles, designs, and trends that reflect cultural, social, and individual expressions. From elegant evening gowns to casual sundresses, fashion dresses play a significant role in personal style and self-expression.
+                          </p>
+                          <div class="d-flex">
+                            <a href="/collection" class="text-uppercase custom_orange-btn mr-3">
+                              Shop Now
+                            </a>
+                            <a href="/contact" class="text-uppercase custom_dark-btn">
+                              Contact Us
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 ">
+                      <div class="slider_img-box ">
+                        <div class="">
+                          
+                          <img src="https://i.pinimg.com/564x/7c/0c/a0/7c0ca03996c1ca922104f3a991b20f5a.jpg" height="500px"  alt="" class="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        <div class="custom_carousel-control ">
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- end slider section -->
+  </div>
+
+  <!-- service section -->
+
+  <section class="service_section layout_padding ">
+    <div class="container">
+      <h2 class="custom_heading">Our Services</h2>
+      <p class="custom_heading-text">
+        Our websites offer a myriad of services tailored to enhance the shopping experience for their customers. From the convenience of online shopping to personalized assistance and style advice, these platforms aim to provide comprehensive solutions that cater to diverse preferences and needs.
+      </p>
+
+      <div class=" layout_padding2">
+        <div class="card-deck">
+          
+          <div class="card">
+            <img class="card-img-top" src="https://i.pinimg.com/564x/96/26/bb/9626bba9bea78a7faaee107c4e98c0a5.jpg" height="100px" width="100px" alt="Card image cap" />
+            <div class="card-body">
+              <h5 class="card-title">Online Shopping</h5>
+              <p class="card-text">
+                One of the primary services of dress websites is to offer an online platform for customers to browse, select, and purchase dresses. This service typically includes features such as a user-friendly interface, detailed product descriptions, high-quality images, and secure payment options.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <img class="card-img-top" src="https://i.pinimg.com/564x/0e/e6/1f/0ee61fdad6edc1a99cc9daa10aa47f3d.jpg" height="70px" width="150px" alt="Card image cap" />
+            <div class="card-body">
+              <h5 class="card-title">Size Guides and Fit Recommendations</h5>
+              <p class="card-text">
+                Dress websites often provide size guides and fit recommendations to help customers choose the right size for their body type. This service can include measurements for different sizes, fit tips, and suggestions on which styles may be most flattering for specific body shapes.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <img class="card-img-top" src="https://i.pinimg.com/564x/24/31/9e/24319e99244594a5d5daaae4511076c0.jpg" height="100px" width="100px" alt="Card image cap" />
+            <div class="card-body">
+              <h5 class="card-title">Customization and Personalization</h5>
+              <p class="card-text">
+                Certain dress websites may offer customization options, allowing customers to personalize their dresses by selecting different colors, fabrics, or embellishments. This service provides a unique and tailored shopping experience, catering to individual preferences and style preferences.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <a href="/services" class="custom_dark-btn">
+          Read More
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- end service section -->
+
+  <!-- fruits section -->
+
+  <section class="fruit_section">
+    <div class="container">
+      <h2 class="custom_heading">Collections</h2>
+      <p class="custom_heading-text">
+        The collections of dress websites represent curated assortments of garments designed to cater to various tastes, occasions, and preferences. These collections often encapsulate the essence of current fashion trends, showcasing a diverse range of styles, silhouettes, colors, and fabrics.
+      </p>
+      
+      <div class="row layout_padding2">
+        <div class="col-md-8">
+          <div class="fruit_detail-box">
+            <h3>
+              Shirt
+            </h3>
+            <p class="mt-4 mb-5">
+              Shirts are versatile garments worn on the upper body, typically made of fabric and featuring a collar, sleeves, and buttons down the front. They come in various styles, fabrics, and colors, catering to different occasions and preferences. From formal dress shirts worn in professional settings to casual t-shirts perfect for everyday wear, shirts serve as essential pieces of clothing in any wardrobe. Whether tailored for a sophisticated look or designed for comfort and leisure, shirts offer both style and functionality, making them a staple in fashion for people of all ages and lifestyles.
+            </p>
+
+            <div>
+              <a href="" class="custom_dark-btn">
+                View
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center align-items-center">
+          <div class="fruit_img-box d-flex justify-content-center align-items-center">
+            <img src="https://i.pinimg.com/564x/82/55/55/8255555c641044060513847cdc9076d6.jpg" alt="" class="" width="250px" />
+          </div>
+        </div>
+      </div>
+
+      <div class="row layout_padding2">
+        <div class="col-md-8">
+          <div class="fruit_detail-box">
+            <h3>
+              Jeans
+            </h3>
+            <p class="mt-4 mb-5">
+              Jeans, a quintessential wardrobe staple, have transcended their humble beginnings as workwear to become a global fashion icon. With their durable denim fabric and timeless design, jeans offer both comfort and style for people of all ages and backgrounds. Whether dressed up with a blazer or down with a t-shirt, jeans effortlessly blend versatility and practicality, making them suitable for a wide range of occasions. From classic blue denim to trendy distressed styles, jeans continue to evolve with fashion trends while maintaining their enduring popularity, cementing their status as an enduring symbol of casual chic in modern fashion culture.
+            </p>
+            <div>
+              <a href="" class="custom_dark-btn">
+                View
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center align-items-center">
+          <div class="fruit_img-box d-flex justify-content-center ">
+            <img src="https://i.pinimg.com/564x/71/4e/12/714e12c7cdc617232abf843fde84b471.jpg"  alt="" class="" width="250px" />
+          </div>
+        </div>
+      </div>
+      <div class="row layout_padding2-top layout_padding-bottom">
+        <div class="col-md-8">
+          <div class="fruit_detail-box">
+            <h3>
+              Jackets
+            </h3>
+            <p class="mt-4 mb-5">
+              A jacket is a versatile outerwear garment typically worn over other clothing to provide warmth and protection from the elements. Available in a variety of styles, materials, and designs, jackets serve both functional and fashionable purposes. Whether it's a lightweight windbreaker for brisk days, a cozy fleece jacket for outdoor activities, or a stylish leather jacket for a night out, jackets offer individuals the opportunity to express their personal style while staying comfortable and prepared for various weather conditions. With options ranging from casual to formal, jackets have become a wardrobe staple that transcends seasons, making them essential pieces in any wardrobe.
+            </p>
+            <div>
+              <a href="" class="custom_dark-btn">
+                View
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center align-items-center">
+          <div class="fruit_img-box d-flex justify-content-center align-items-center">
+            <img src="https://i.pinimg.com/564x/00/5f/da/005fdaea169a0bb90aefa4570a9de902.jpg" alt="" class="" width="250px" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end fruits section -->
+
+  <!-- client section -->
+
+  <section class="client_section layout_padding">
+    
+    <div class="container">
+     
+      <h2 class="custom_heading"> </h2>
+      <p class="custom_heading-text">
+        
+      </p>
+      <div>
+        <div id="carouselExampleControls-2" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="client_container layout_padding2">
+                <div class="client_img-box">
+                  <img src="https://i.pinimg.com/564x/8f/70/5b/8f705ba8116f187de78d48743ec8e242.jpg" class="py-3" alt="" />
+                </div>
+
+                <div class="client_detail">
+                  <h3>
+                    Bill Cunningham
+                  </h3>
+                  <p class="custom_heading-text">
+                    "Fashion is the armor to survive the reality of everyday life."
+                  </p>
+                </div>
+                <div class="client_img-box pt-5 mt-5">
+                  <img src="https://i.pinimg.com/564x/f8/c4/f7/f8c4f74652a387ad634739f1fb9b9c75.jpg" class="py-3" alt="" />
+                </div>
+                <div class="client_detail">
+                
+                  <h3>
+                    Vivienne Westwood
+                  </h3>
+                  <p class="custom_heading-text">
+                    "If you love something, wear it all the time... Find things that suit you. That's how you look extraordinary."
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+          
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end client section -->
+
+  <!-- contact section -->
+  <section class="contact_section layout_padding">
+    <div class="container">
+      <h2 class="font-weight-bold">
+        Contact Us
+      </h2>
+      <div class="row">
+        <div class="col-md-8 mr-auto">
+          <form action="">
+            <div class="contact_form-container">
+              <div>
+                <div>
+                  <input type="text" placeholder="Name">
+                </div>
+                <div>
+                  <input type="text" placeholder="Phone Number">
+                </div>
+                <div>
+                  <input type="email" placeholder="Email">
+                </div>
+
+                <div class="mt-5">
+                  <input type="text" placeholder="Message">
+                </div>
+                <div class="mt-5">
+                  <button type="submit">
+                    send
+                  </button>
+                </div>
+              </div>
+
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- map section -->
+<section class="map_section">
+  <div id="map" class="h-100 w-100 ">
+  </div>
+</section>
+
+<!-- end map section -->
+
+  <!-- end contact section -->
+  {% endblock %}
+
+  
+</body>
+
+</html>

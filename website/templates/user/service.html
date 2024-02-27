@@ -1,0 +1,125 @@
+{% extends 'user/base.html'%}
+{% load static %}
+{% block title %}
+  Services
+{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <!-- responsive style -->
+  
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+  <link href="{%  static 'css/style.css' %}" rel="stylesheet" />
+  <link type="text/css" href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="hero_area sub_pages">
+  </div>
+
+  <!-- service section -->
+
+  <section class="service_section layout_padding ">
+    <div class="container">
+      <h2 class="custom_heading">Our Services</h2>
+      <p class="custom_heading-text">
+        Our websites offer a myriad of services tailored to enhance the shopping experience for their customers. From the convenience of online shopping to personalized assistance and style advice, these platforms aim to provide comprehensive solutions that cater to diverse preferences and needs.
+      </p>
+
+      <div class=" layout_padding2">
+        <div class="card-deck">
+          <div class="card">
+            {% comment %} <img class="card-img-top" src="https://i.pinimg.com/564x/96/26/bb/9626bba9bea78a7faaee107c4e98c0a5.jpg" height="100px" width="100px" alt="Card image cap" /> {% endcomment %}
+            <div class="card-body py-5 my-5">
+              <h5 class="card-title">Online Shopping</h5>
+              <p class="card-text">
+                One of the primary services of dress websites is to offer an online platform for customers to browse, select, and purchase dresses. This service typically includes features such as a user-friendly interface, detailed product descriptions, high-quality images, and secure payment options.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            {% comment %} <img class="card-img-top" src="https://i.pinimg.com/564x/0e/e6/1f/0ee61fdad6edc1a99cc9daa10aa47f3d.jpg" height="70px" width="150px" alt="Card image cap" /> {% endcomment %}
+            <div class="card-body py-5 my-5">
+              <h5 class="card-title">Size Guides and Fit Recommendations</h5>
+              <p class="card-text">
+                Dress websites often provide size guides and fit recommendations to help customers choose the right size for their body type. This service can include measurements for different sizes, fit tips, and suggestions on which styles may be most flattering for specific body shapes.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            {% comment %} <img class="card-img-top" src="https://i.pinimg.com/564x/24/31/9e/24319e99244594a5d5daaae4511076c0.jpg" height="100px" width="100px" alt="Card image cap" /> {% endcomment %}
+            <div class="card-body py-5 my-5">
+              <h5 class="card-title">Customization and Personalization</h5>
+              <p class="card-text">
+                Certain dress websites may offer customization options, allowing customers to personalize their dresses by selecting different colors, fabrics, or embellishments. This service provides a unique and tailored shopping experience, catering to individual preferences and style preferences.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class=" layout_padding2">
+        <div class="card-deck">
+          <div class="card">
+            {% comment %} <img class="card-img-top" src="images/card-item-1.png" alt="Card image cap" /> {% endcomment %}
+            <div class="card-body py-5 my-5">
+              <h5 class="card-title">Dress Cleaning and Preservation</h5>
+              <p class="card-text">
+                Offer dress cleaning and preservation services to help customers maintain the quality and longevity of their garments. This could include professional dry cleaning, stain removal, and preservation techniques to ensure dresses remain in pristine condition for future use or storage.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            
+            <div class="card-body py-5 my-5">
+              <h5 class="card-title "  >Styling Consultations</h5>
+              <p class="card-text">
+                Provide personalized styling consultations either in-person or virtually. Customers can receive advice on how to style their dress for different occasions, body types, or personal preferences. This service could include recommendations on accessories, shoes, hairstyles, and makeup to complement the dress.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            {% comment %} <img class="card-img-top" src="https://i.pinimg.com/564x/dd/b4/6b/ddb46b8ba1bbcc178dc6d0aa13873162.jpg" height="100px" width='250px'  alt="Card image cap" /> {% endcomment %}
+            <div class="card-body py-5 my-5">
+              <h5 class="card-title">Custom Tailoring</h5>
+              <p class="card-text">
+                Offer custom tailoring services where customers can request adjustments or alterations to the dresses they purchase. This could include options such as hemming, taking in or letting out seams, adding sleeves, etc. Highlight the expertise of your tailors and the personalized attention to detail customers can expect.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- end service section -->
+  {% endblock %}
+
+</body>
+
+</html>
