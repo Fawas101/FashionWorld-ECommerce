@@ -1,0 +1,250 @@
+{% extends 'user/base.html'%}
+{% load static %}
+{% block title %}
+ User Profile
+{% endblock %}
+
+{% block content %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/profile.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="main-body">
+              
+              <div class="row gutters-sm">
+                <div class="col-md-4 mb-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="d-flex flex-column align-items-center text-center mb-4">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
+                        <div class="mt-3">
+                            <h5>Hello</h5>
+                            <h4>John Doe {{ userprofile.name }}</h4>
+                          <p class="text-secondary mb-1">{{userprofile.email}}jjjj</p>
+                          <button class="btn btn-outline-primary">Change Password</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-md-8">
+
+                  <div class="card mb-3">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-sm-3">
+                          <h6 class="mb-0">Full Name</h6>
+                        </div>
+                        <div class="col-sm-9 text-secondary">
+                          Kenneth Valdez
+                        </div>
+                      </div>
+                      <hr>
+                      <div class="row">
+                        <div class="col-sm-3">
+                          <h6 class="mb-0">Email</h6>
+                        </div>
+                        <div class="col-sm-9 text-secondary">
+                          fip@jukmuh.al
+                        </div>
+                      </div>
+                      <hr>
+                      <div class="row">
+                        <div class="col-sm-3">
+                          <h6 class="mb-0">Mobile</h6>
+                        </div>
+                        <div class="col-sm-9 text-secondary">
+                          (239) 816-9029
+                        </div>
+                      </div>
+                      <hr>
+                      <div class="row">
+                        <div class="col-sm-3">
+                          <h6 class="mb-0">Address 1</h6>
+                        </div>
+                        <div class="col-sm-9 text-secondary">
+                          (320) 380-4539
+                        </div>
+                      </div>
+                      <hr>
+                      <div class="row">
+                        <div class="col-sm-3">
+                          <h6 class="mb-0">Address 2</h6>
+                        </div>
+                        <div class="col-sm-9 text-secondary">
+                          Bay Area, San Francisco, CA
+                        </div>
+                      </div>
+                      <hr>
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <a class="btn btn-info " target="__blank" href="https://www.bootdey.com/snippets/view/profile-edit-data-and-skills">Edit</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>   
+                </div>
+                
+              </div>
+    
+            </div>
+        </div>
+        
+
+    <div class="container mt-4  ">    
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-12 my-lg-0 my-1 ">                
+            <div id="main-content" class="bg-white border">
+            <div class="d-flex flex-column ">
+                <div class="h5">Your Order History</div>
+            </div>
+
+
+            <div class="d-flex my-4 flex-wrap">
+                <div class="box mx-3 me-4 my-1 bg-light ">
+                    <img src="https://www.freepnglogos.com/uploads/box-png/cardboard-box-brown-vector-graphic-pixabay-2.png"
+                        alt="">
+                    <div class="d-flex align-items-center mt-2 ">
+                        <div class="tag px-2">Order placed</div>
+                        <div class="ms-auto number px-1"> 10</div>
+                    </div>
+                </div>
+                <div class="box me-4 my-1 bg-light">
+                    <img src="https://www.freepnglogos.com/uploads/shopping-cart-png/shopping-cart-campus-recreation-university-nebraska-lincoln-30.png"
+                        alt="">
+                    <div class="d-flex align-items-center mt-2">
+                        <div class="tag px-2">Items in Cart</div>
+                        <div class="ms-auto number px-2">10</div>
+                    </div>
+                </div>
+                <div class="box mx-3 me-4 my-1 bg-light">
+                    <img src="https://www.freepnglogos.com/uploads/love-png/love-png-heart-symbol-wikipedia-11.png"
+                        alt="">
+                    <div class="d-flex align-items-center mt-2">
+                        <div class="tag px-2">Wishlist</div>
+                        <div class="ms-auto number px-2">10</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="text-uppercase">My recent orders</div>
+            <div class="order my-3 bg-light  ">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="d-flex flex-column justify-content-between order-summary">
+                            <div class="d-flex align-items-center">
+                                <div class="text-uppercase mx-2">Order #fur10001</div>
+                                <div class="blue-label ms-auto text-uppercase">paid</div>
+                            </div>
+                            <div class="fs-8">Products #03</div>
+                            <div class="fs-8">22 August, 2020 | 12:05 PM</div>
+                            <div class="rating d-flex align-items-center pt-1">
+                                <img src="https://www.freepnglogos.com/uploads/like-png/like-png-hand-thumb-sign-vector-graphic-pixabay-39.png"
+                                    alt=""><span class="px-2">Rating:</span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="far fa-star"></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-8 ">
+                        <div class="d-sm-flex align-items-sm-start justify-content-sm-between">
+                            <div class="status">Status : Delivered</div>
+                            <div class="btn btn-primary text-uppercase">order info</div>
+                        </div>
+                        <div class="progressbar-track">
+                            <ul class="progressbar">
+                                <li id="step-1" class="text-muted green">
+                                    <span class="fas fa-gift"></span>
+                                </li>
+                                <li id="step-2" class="text-muted green">
+                                    <span class="fas fa-check"></span>
+                                </li>
+                                <li id="step-3" class="text-muted green">
+                                    <span class="fas fa-box"></span>
+                                </li>
+                                <li id="step-4" class="text-muted green">
+                                    <span class="fas fa-truck"></span>
+                                </li>
+                                <li id="step-5" class="text-muted green">
+                                    <span class="fas fa-box-open"></span>
+                                </li>
+                            </ul>
+                            <div id="tracker"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="order my-3 bg-light">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="d-flex flex-column justify-content-between order-summary">
+                            <div class="d-flex align-items-center">
+                                <div class="text-uppercase">Order #fur10001</div>
+                                <div class="green-label ms-auto text-uppercase">cod</div>
+                            </div>
+                            <div class="fs-8">Products #03</div>
+                            <div class="fs-8">22 August, 2020 | 12:05 PM</div>
+                            <div class="rating d-flex align-items-center pt-1">
+                                <img src="https://www.freepnglogos.com/uploads/like-png/like-png-hand-thumb-sign-vector-graphic-pixabay-39.png"
+                                    alt=""><span class="px-2">Rating:</span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="far fa-star"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="d-sm-flex align-items-sm-start justify-content-sm-between">
+                            <div class="status">Status : Delivered</div>
+                            <div class="btn btn-primary text-uppercase">order info</div>
+                        </div>
+                        <div class="progressbar-track">
+                            <ul class="progressbar">
+                                <li id="step-1" class="text-muted green">
+                                    <span class="fas fa-gift"></span>
+                                </li>
+                                <li id="step-2" class="text-muted">
+                                    <span class="fas fa-check"></span>
+                                </li>
+                                <li id="step-3" class="text-muted">
+                                    <span class="fas fa-box"></span>
+                                </li>
+                                <li id="step-4" class="text-muted">
+                                    <span class="fas fa-truck"></span>
+                                </li>
+                                <li id="step-5" class="text-muted">
+                                    <span class="fas fa-box-open"></span>
+                                </li>
+                            </ul>
+                            <div id="tracker"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+</body>
+</html>
+{% endblock %}

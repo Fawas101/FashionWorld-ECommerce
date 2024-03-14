@@ -1,5 +1,5 @@
 from django import forms
-from .models import Account
+from .models import Account, UserProfile
 from django.core.exceptions import ValidationError
 
 
@@ -30,6 +30,16 @@ class RegistrationForm(forms.ModelForm):
                  raise ValidationError("Passwords do not match")
             return cleaned_data
     
+class UserForm(forms.ModelForm):
+        class Meta:
+             model = Account
+             fields = ('name',)
+    
+class UserProfileForm(forms.ModelForm):
+     class Meta:
+          model = UserProfile
+          fields = ('address_line_1','address_line_2', 'phone_number','city', 'state', 'country', 'profile_picture' )
+
 class LoginForm(forms.Form):
     email = forms.EmailField()
     password = forms.CharField(widget=forms.PasswordInput)
@@ -37,3 +47,11 @@ class LoginForm(forms.Form):
 
 class ForgotForm(forms.Form):
     email = forms.EmailField()
+
+class ResetForm(forms.Form):
+    password = forms.CharField(widget=forms.PasswordInput)
+    confirmpassword = forms.CharField(widget=forms.PasswordInput)
+
+
+class OtpForm(forms.Form):
+    otp = forms.IntegerField()

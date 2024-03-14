@@ -5,10 +5,10 @@
 {% block title %}
  Collections
 {% endblock %}
-
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
-    {% block content %}
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=~~, initial-scale=1.0">
@@ -28,7 +28,9 @@
         </div>
        
        
-        <!-- Right Column -->
+        <form action="{% url 'add_cart' single_product.id  %}" method="GET">
+        {% csrf_token %}
+          <!-- Right Column -->
         <div class="right-column my-5 py-5">
        
           <!-- Product Description -->
@@ -40,21 +42,15 @@
           
             <!-- Product Color -->
              <div class="product-color">
-              <span>Size</span>
+              <span>Color</span>
        
               <div class="color-choose">
-                <div>
-                  <input data-image="red" type="radio" id="red" name="color" value="red" checked>
-                  <label for="red"><span></span></label>
-                </div>
-                <div>
-                  <input data-image="blue" type="radio" id="blue" name="color" value="blue">
-                  <label for="blue"><span></span></label>
-                </div>
-                <div>
-                  <input data-image="black" type="radio" id="black" name="color" value="black">
-                  <label for="black"><span></span></label>
-                </div>
+                <select name="color" class="form-control">
+                  <option value="" disabled selected >Select</option>
+                  {% for i in single_product.variation_set.colors %}
+                  <option value="{{ i.variation_value | lower}}">{{i.variation_value}}</option>
+                  {% endfor %}                
+                </select>
               </div>
        
             </div>
@@ -62,37 +58,36 @@
             <div class="row pb-4 px-3">
                 <div class="item-option-select  ">
                     <h6>Select Size</h6>
-                    <div class="btn-group btn-group-sm btn-group-toggle" data-toggle="buttons" >
-                        <label class="btn btn-light">
-                            <input type="radio" name="radio_color">S
-                        </label>
-                        <label class="btn btn-light active">
-                            <input type="radio" name="radio_color">M
-                        </label>
-                        <label class="btn btn-light">
-                            <input type="radio" name="radio_color">L
-                        </label>
-                        <label class="btn btn-light" >
-                            <input type="radio" name="radio_color">XL
-                        </label>
-                    </div>
+                    <select name="size" class="form-control">
+                      <option value="" disabled selected >Select</option>
+                      {% for i in single_product.variation_set.sizes %}
+                      <option value="{{i.variation_value | lower }}">{{ i.variation_value | capfirst }}</option>
+                      {% endfor %}
+                    </select>
                 </div>
             </div>
             
             <!-- Product Pricing -->
           <div class="product-price pb-3">
-            <span>Rs - {{single_product.price}}</span>
+            <span>₹ {{single_product.price}}</span>
           </div>
 
         <div >
+            
+
             {% if single_product.stock <= 0 %}
             <b><h4 style="color: red;" >Out of Stock!</h4></b> </div> 
             {% else %}
-            <a href="{% url 'add_cart' single_product.id  %}" class="cart-btn">Add to cart</a>
+              {% if in_cart %}
+              <a href="{% url 'cart' %}" class="btn cart-btn">View Cart</a>
+              {% else %}
+            <button type="submit" class="btn cart-btn" >Add to cart</button>
+              {%endif%}  
             {%endif%}
+
             </div>
-          </div>
-       
+         
+          </form>
           
         </div>
       </main>

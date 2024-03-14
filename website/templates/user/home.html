@@ -61,7 +61,7 @@
                             Fashion dresses encompass a wide array of styles, designs, and trends that reflect cultural, social, and individual expressions. From elegant evening gowns to casual sundresses, fashion dresses play a significant role in personal style and self-expression.
                           </p>
                           <div class="d-flex">
-                            <a href="/collection" class="text-uppercase custom_orange-btn mr-3">
+                            <a href="/category" class="text-uppercase custom_orange-btn mr-3">
                               Shop Now
                             </a>
                             <a href="/contact" class="text-uppercase custom_dark-btn">
@@ -162,19 +162,20 @@
       <p class="custom_heading-text">
         The collections of dress websites represent curated assortments of garments designed to cater to various tastes, occasions, and preferences. These collections often encapsulate the essence of current fashion trends, showcasing a diverse range of styles, silhouettes, colors, and fabrics.
       </p>
-      
+      {% for category in links %}
+
       <div class="row layout_padding2">
         <div class="col-md-8">
           <div class="fruit_detail-box">
             <h3>
-              Shirt
+              {{category.category_name}}
             </h3>
             <p class="mt-4 mb-5">
-              Shirts are versatile garments worn on the upper body, typically made of fabric and featuring a collar, sleeves, and buttons down the front. They come in various styles, fabrics, and colors, catering to different occasions and preferences. From formal dress shirts worn in professional settings to casual t-shirts perfect for everyday wear, shirts serve as essential pieces of clothing in any wardrobe. Whether tailored for a sophisticated look or designed for comfort and leisure, shirts offer both style and functionality, making them a staple in fashion for people of all ages and lifestyles.
+              {{category.description}}
             </p>
 
             <div>
-              <a href="" class="custom_dark-btn">
+              <a href="{{category.get_url}}" class="custom_dark-btn">
                 View
               </a>
             </div>
@@ -182,55 +183,12 @@
         </div>
         <div class="col-md-4 d-flex justify-content-center align-items-center">
           <div class="fruit_img-box d-flex justify-content-center align-items-center">
-            <img src="https://i.pinimg.com/564x/82/55/55/8255555c641044060513847cdc9076d6.jpg" alt="" class="" width="250px" />
+            <img src="{{category.cat_image.url}}" alt="" class="" width="250px" />
           </div>
         </div>
       </div>
+      {% endfor %}
 
-      <div class="row layout_padding2">
-        <div class="col-md-8">
-          <div class="fruit_detail-box">
-            <h3>
-              Jeans
-            </h3>
-            <p class="mt-4 mb-5">
-              Jeans, a quintessential wardrobe staple, have transcended their humble beginnings as workwear to become a global fashion icon. With their durable denim fabric and timeless design, jeans offer both comfort and style for people of all ages and backgrounds. Whether dressed up with a blazer or down with a t-shirt, jeans effortlessly blend versatility and practicality, making them suitable for a wide range of occasions. From classic blue denim to trendy distressed styles, jeans continue to evolve with fashion trends while maintaining their enduring popularity, cementing their status as an enduring symbol of casual chic in modern fashion culture.
-            </p>
-            <div>
-              <a href="" class="custom_dark-btn">
-                View
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 d-flex justify-content-center align-items-center">
-          <div class="fruit_img-box d-flex justify-content-center ">
-            <img src="https://i.pinimg.com/564x/71/4e/12/714e12c7cdc617232abf843fde84b471.jpg"  alt="" class="" width="250px" />
-          </div>
-        </div>
-      </div>
-      <div class="row layout_padding2-top layout_padding-bottom">
-        <div class="col-md-8">
-          <div class="fruit_detail-box">
-            <h3>
-              Jackets
-            </h3>
-            <p class="mt-4 mb-5">
-              A jacket is a versatile outerwear garment typically worn over other clothing to provide warmth and protection from the elements. Available in a variety of styles, materials, and designs, jackets serve both functional and fashionable purposes. Whether it's a lightweight windbreaker for brisk days, a cozy fleece jacket for outdoor activities, or a stylish leather jacket for a night out, jackets offer individuals the opportunity to express their personal style while staying comfortable and prepared for various weather conditions. With options ranging from casual to formal, jackets have become a wardrobe staple that transcends seasons, making them essential pieces in any wardrobe.
-            </p>
-            <div>
-              <a href="" class="custom_dark-btn">
-                View
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 d-flex justify-content-center align-items-center">
-          <div class="fruit_img-box d-flex justify-content-center align-items-center">
-            <img src="https://i.pinimg.com/564x/00/5f/da/005fdaea169a0bb90aefa4570a9de902.jpg" alt="" class="" width="250px" />
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
